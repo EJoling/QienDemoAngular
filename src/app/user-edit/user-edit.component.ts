@@ -19,7 +19,6 @@ export class UserEditComponent implements OnInit {
 
   ngOnInit(): void {
     const id = +this.route.snapshot.params["id"]; // the "+" prefix makes it a number id instead of a string id
-
     this.userService.findById(id).subscribe( user => {
       this.user = user;
     });
