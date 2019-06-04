@@ -29,4 +29,15 @@ export class UserService {
   findById(id:Number): Observable<User> {
     return this.httpClient.get<User>(`${this.url}/${this.endpoint}/${id}`);
   }
+
+  //edit user based on id
+  update(user: User): Observable<User> {
+    return this.httpClient.put<User>(`${this.url}/${this.endpoint}/${user.id}`, user);
+  }
+
+  //delete user from db
+  delete(id:Number): Observable<User> {
+    return this.httpClient.delete<User>(`${this.url}/${this.endpoint}/${id}`);
+  }
+  
 }

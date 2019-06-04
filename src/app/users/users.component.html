@@ -2,7 +2,11 @@
   Example list
   <ul>
     <li *ngFor="let user of users">
-      <a [routerLink]="['/users', user.id]">Show</a> id: {{ user.id }} has username: {{ user.username }}
+      <a> id: {{ user.id }} has username: {{ user.username }} </a> <a [routerLink]="['/users', user.id]">Show</a>
+      &nbsp; 
+      <a [routerLink]="['/users/edit', user.id]">Edit</a>
+      &nbsp;
+      <input type="button" value="Delete" (click)="delete(user.id)" [routerLink]="['/users']">
     </li>
   </ul>
 </div>

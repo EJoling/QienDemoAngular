@@ -9,13 +9,15 @@ import { CreateUserComponent } from './create-user/create-user.component';
 
 import { FormsModule } from '@angular/forms';
 import { UserShowComponent } from './user-show/user-show.component';
+import { UserEditComponent } from './user-edit/user-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
     CreateUserComponent,
-    UserShowComponent
+    UserShowComponent,
+    UserEditComponent
   ],
   imports: [
     BrowserModule,
