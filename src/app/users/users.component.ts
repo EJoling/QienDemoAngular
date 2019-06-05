@@ -11,7 +11,7 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class UsersComponent implements OnInit {
 
-  private users: User[]; //a field containing anm araay of User with name users
+  private users: User[]; //a field containing an araay of User with name users
 
   constructor(
     private userService: UserService,
@@ -19,7 +19,7 @@ export class UsersComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    
+
     this.userService.list().subscribe(data => {
       this.users = data;
     })
